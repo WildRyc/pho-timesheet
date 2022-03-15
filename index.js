@@ -38,7 +38,7 @@ request.onerror = function() {
 request.send();
 
 function changeEvent() {
-  let dropPeriod = option;
+  let dropPeriod = dropdown.value;
   if(selvalue != 'Select Period'){
     document.getElementsByClassName('hoursWorked','d14').value(dropPeriod)
   }
