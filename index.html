@@ -5,11 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHO Timesheet Cruncher</title>
-    <ref="styles" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
+<form id="allInputs" action="/action_page.php" method="post">
+    <fieldset>
+    <legend>Part A - EMPLOYEE INFORMATION</legend>
+    <label for="lName">Last Name:</label>
+    <input type="text" id="lName" name="lName">
+    <label for="fName"> First Name:</label>
+    <input type="text" id="fName" name="fName"><br>
+    <label for="jobCode">Job Code:</label>
+    <input type="text" id="jobCode" name="jobCode">
+    <label for="eNumber"> Employee Number:</label>
+    <input type="text" id="eNumber" name="eNumber"><br>
+    <label for="period">Period</label>
+    <select id="periodDropdown" name="period">
+        <option >-- Select --</option>
+        </select><br>
+        <script src="index.js"></script>
+    <label for="status">Status:</label><br>
+    <input type="radio" name="status" value="pft" checked>Permanent - Full-Time<br>
+    <input type="radio" name="status" value="ppt" checked>Permanent - Part-Time<br>
+    <input type="radio" name="status" value="ch" checked>Contract - Hourly<br>
+    <input type="radio" name="status" value="cft" checked>Contract - Full-Time<br>
+</fieldset>
+<fieldset>
+    <legend>Part B - REGULAR HOURS</legend>
+    
+    <div class="row">
+        <div class="column" class="weekDate">Week 1 DATE<br>
+            <input type="date" id="dayOne" name="day1date"><br>
+            <input type="date" id="dayTwo" name="day2date"><br> 
+            <input type="date" id="dayThree" name="day3date"><br>
+            <input type="date" id="dayFour" name="day4date"><br>
+            <input type="date" id="dayFive" name="day5date"><br>
+            <input type="date" id="daySix" name="day6date"><br>
+            <input type="date" id="daySeven" name="day7date"><br>
+        </div>
+        <div class="column" class="endTime">Start Time<br>
+            <input type="time" class="d1" id="start1" name="start1"><br>
+            <input type="time" class="d2" id="start2" name="start2"><br>
+            <input type="time" class="d3" id="start3" name="start3"><br>
+            <input type="time" class="d4" id="start4" name="start4"><br>
+            <input type="time" class="d5" id="start5" name="start5"><br>
+            <input type="time" class="d6" id="start6" name="start6"><br>
+            <input type="time" class="d7" id="start7" name="start7"><br>
+        </div>
+        <div class="column" class="stopTime">Stop Time<br>
+            <input type="time" class="d1"><br>
+            <input type="time" class="d2"><br>
+            <input type="time" class="d3"><br>
+            <input type="time" class="d4"><br>
+            <input type="time" class="d5"><br>
+            <input type="time" class="d6"><br>
+            <input type="time" class="d7"><br>
+        </div>
+        <div class="column" class="hoursWorked"># of Hours Worked<br>
+            <input type="number" class="d1">
+            <input type="number" class="d2">
+            <input type="number" class="d3">
+            <input type="number" class="d4">
+            <input type="number" class="d5">
+            <input type="number" class="d6">
+            <input type="number" class="d7">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">Week 2 DATE<br>
+            <input type="date" class="d8"><br>
+            <input type="date" class="d9"><br>
+            <input type="date" class="d10"><br>
+            <input type="date" class="d11"><br>
+            <input type="date" class="d12"><br>
+            <input type="date" class="d13"><br>
+            <input type="date" class="d14"><br>
+        </div>
+        <div class="column">Start Time<br>
+            <input type="time" class="d8"><br>
+            <input type="time" class="d9"><br>
+            <input type="time" class="d10"><br>
+            <input type="time" class="d11"><br>
+            <input type="time" class="d12"><br>
+            <input type="time" class="d13"><br>
+            <input type="time" class="d14"><br>
+        </div>
+        
+        <div class="column">Stop Time<br>
+            <input type="time" class="d8"><br>
+            <input type="time" class="d9"><br>
+            <input type="time" class="d10"><br>
+            <input type="time" class="d11"><br>
+            <input type="time" class="d12"><br>
+            <input type="time" class="d13"><br>
+            <input type="time" class="d14"><br>
+        </div>
+        <div class="column">No. of Hours Worked<br>
+            <input type="number" class="d8">
+            <input type="number" class="d9">
+            <input type="number" class="d10">
+            <input type="number" class="d11">
+            <input type="number" class="d12">
+            <input type="number" class="d13">
+            <input type="number" class="d14"></div>
+    </div>
+</fieldset>
+</form>
     <div id="app"></div>
     <button id="generate">Generate Time Sheet</button>
-    <script src="src/index.js"></script>
 </body>
 </html>
