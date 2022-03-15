@@ -2,6 +2,7 @@
 //import { saveAs } from 'file-saver'
 //import * as fs from "fs";
 
+// Populate the pay period dropdown
 let dropdown = document.getElementById('periodDropdown');
 dropdown.length = 0;
 
@@ -37,10 +38,11 @@ request.onerror = function() {
 
 request.send();
 
+//Fill in the dayWorked values based on the selection from the dropDown
 function changeEvent() {
-  let dropPeriod = dropdown.value;
+  let dropPeriod = selvalue;
   if(selvalue != 'Select Period'){
-    document.getElementsByClassName('hoursWorked','d14').value(dropPeriod)
+    document.getElementsByClassName('hoursWorked','d14').value(selvalue)
   }
 }
 
