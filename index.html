@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHO Timesheet Cruncher</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="index.js"></script>
 </head>
 <body>
 <form id="allInputs" action="/action_page.php" method="post">
@@ -35,7 +34,7 @@
     <legend>Part B - REGULAR HOURS</legend>
     
     <div class="row">
-        <div class="column" class="weekDate">Week 1 DATE<br>
+        <div class="column" class="workDay">Week 1 DATE<br>
             <input type="date" id="dayOne" name="day1date"><br>
             <input type="date" id="dayTwo" name="day2date"><br> 
             <input type="date" id="dayThree" name="day3date"><br>
@@ -44,7 +43,7 @@
             <input type="date" id="daySix" name="day6date"><br>
             <input type="date" id="daySeven" name="day7date"><br>
         </div>
-        <div class="column" class="endTime">Start Time<br>
+        <div class="column" class="startTime">Start Time<br>
             <input type="time" class="d1" id="start1" name="start1"><br>
             <input type="time" class="d2" id="start2" name="start2"><br>
             <input type="time" class="d3" id="start3" name="start3"><br>
@@ -73,7 +72,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="column">Week 2 DATE<br>
+        <div class="column" class="workDay">Week 2 DATE<br>
             <input type="date" class="d8"><br>
             <input type="date" class="d9"><br>
             <input type="date" class="d10"><br>
@@ -82,7 +81,7 @@
             <input type="date" class="d13"><br>
             <input type="date" class="d14"><br>
         </div>
-        <div class="column">Start Time<br>
+        <div class="column" class="startTime">Start Time<br>
             <input type="time" class="d8"><br>
             <input type="time" class="d9"><br>
             <input type="time" class="d10"><br>
@@ -92,7 +91,7 @@
             <input type="time" class="d14"><br>
         </div>
         
-        <div class="column">Stop Time<br>
+        <div class="column" class="stopTime">Stop Time<br>
             <input type="time" class="d8"><br>
             <input type="time" class="d9"><br>
             <input type="time" class="d10"><br>
@@ -101,7 +100,7 @@
             <input type="time" class="d13"><br>
             <input type="time" class="d14"><br>
         </div>
-        <div class="column">No. of Hours Worked<br>
+        <div class="column" class="hoursWorked">No. of Hours Worked<br>
             <input type="number" class="d8">
             <input type="number" class="d9">
             <input type="number" class="d10">
@@ -115,4 +114,5 @@
     <div id="app"></div>
     <button id="generate">Generate Time Sheet</button>
 </body>
+<script src="index.js"></script>
 </html>
