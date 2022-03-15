@@ -22,8 +22,8 @@ request.onload = function() {
     let option;
     for (let i = 0; i < data.length; i++) {
       option = document.createElement('option');
-      option.text = data[i].Period;
-      option.value = data[i].End;
+      option.text = data[i].End
+      option.value = data[i].Period;
       dropdown.add(option);
     }
    } else {
@@ -37,6 +37,12 @@ request.onerror = function() {
 
 request.send();
 
+function changeEvent() {
+  let dropPeriod = dropDown.value;
+  if(selvalue != 'Select Period'){
+    document.getElementsByClassName('hoursWorked','d14').value(dropPeriod)
+  }
+}
 
 // document.querySelectorAll('#allInputs')
 
