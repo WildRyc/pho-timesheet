@@ -41,7 +41,7 @@ request.send();
 //Fill in the dayWorked values based on the selection from the dropDown
 function changeEvent() {
   let dropPeriod = document.getElementById('periodDropdown').value;
-  if(selvalue != 'Select Period'){
+  if(dropPeriod != 'Select Period'){
     document.getElementsByClassName('hoursWorked','d14').value(dropPeriod)
   }
 }
