@@ -42,7 +42,15 @@ request.send();
 function changeEvent() {
   let dropPeriod = document.getElementById('periodDropdown').value;
   if(dropPeriod != 'Select Period'){
-    document.getElementsByClassName('hoursWorked','d14').value(dropPeriod)
+    console.log('This is the dropPeriod value: ', dropPeriod)
+    // console.log(document.getElementsByClassName('workDay d14').value)
+    // document.getElementsByClassName('workDay d14').value = dropPeriod
+    // console.log(document.getElementsByClassName('workDay d14').value)
+    // console.log('This is the result of querySelector: ', document.querySelector('div.workday > .d14'), 'it should be null')
+    // document.querySelector('div.workday > .d14').value = 1
+    // console.log('This is the result of the value setting: ', document.querySelector('div.workday > .d14'))
+    document.getElementById('hwd14').value = dropPeriod;
+
   }
 }
 
