@@ -20,7 +20,7 @@
     <label for="eNumber"> Employee Number:</label>
     <input type="text" id="eNumber" name="eNumber"><br>
     <label for="period">Period Ending:</label>
-    <select id="periodDropdown" name="period" onchange="changeEvent()">
+    <select id="periodDropdown" name="period" onchange="periodSelect()">
         <option >-- Select --</option>
         </select><br>
         
@@ -35,44 +35,14 @@
     
     <div class="row">
         <div class="column" class="workDay">Week 1 DATE<br>
-            <input type="date" id="dayOne" name="day1date"><br>
-            <input type="date" id="dayTwo" name="day2date"><br> 
-            <input type="date" id="dayThree" name="day3date"><br>
-            <input type="date" id="dayFour" name="day4date"><br>
-            <input type="date" id="dayFive" name="day5date"><br>
-            <input type="date" id="daySix" name="day6date"><br>
-            <input type="date" id="daySeven" name="day7date"><br>
-        </div>
-        <div class="column" class="startTime">Start Time<br>
-            <input type="time" class="d1" id="start1" name="start1"><br>
-            <input type="time" class="d2" id="start2" name="start2"><br>
-            <input type="time" class="d3" id="start3" name="start3"><br>
-            <input type="time" class="d4" id="start4" name="start4"><br>
-            <input type="time" class="d5" id="start5" name="start5"><br>
-            <input type="time" class="d6" id="start6" name="start6"><br>
-            <input type="time" class="d7" id="start7" name="start7"><br>
-        </div>
-        <div class="column" class="stopTime">Stop Time<br>
-            <input type="time" class="d1"><br>
-            <input type="time" class="d2"><br>
-            <input type="time" class="d3"><br>
-            <input type="time" class="d4"><br>
-            <input type="time" class="d5"><br>
-            <input type="time" class="d6"><br>
-            <input type="time" class="d7"><br>
-        </div>
-        <div class="column" class="hoursWorked"># of Hours Worked<br>
-            <input type="number" class="d1">
-            <input type="number" class="d2">
-            <input type="number" class="d3">
-            <input type="number" class="d4">
-            <input type="number" class="d5">
-            <input type="number" class="d6">
-            <input type="number" class="d7">
-        </div>
-    </div>
-    <div class="row">
-        <div class="column" class="workDay">Week 2 DATE<br>
+            <input type="date" class="d1"><br>
+            <input type="date" class="d2"><br>
+            <input type="date" class="d3"><br>
+            <input type="date" class="d4"><br>
+            <input type="date" class="d5"><br>
+            <input type="date" class="d6"><br>
+            <input type="date" class="d7"><br>
+            Week 2 DATE<br>
             <input type="date" class="d8"><br>
             <input type="date" class="d9"><br>
             <input type="date" class="d10"><br>
@@ -82,6 +52,14 @@
             <input type="date" class="d14" id="hwd14"><br>
         </div>
         <div class="column" class="startTime">Start Time<br>
+            <input type="time" class="d1"><br>
+            <input type="time" class="d2"><br>
+            <input type="time" class="d3"><br>
+            <input type="time" class="d4"><br>
+            <input type="time" class="d5"><br>
+            <input type="time" class="d6"><br>
+            <input type="time" class="d7"><br>
+            <br>
             <input type="time" class="d8"><br>
             <input type="time" class="d9"><br>
             <input type="time" class="d10"><br>
@@ -90,8 +68,15 @@
             <input type="time" class="d13"><br>
             <input type="time" class="d14"><br>
         </div>
-        
         <div class="column" class="stopTime">Stop Time<br>
+            <input type="time" class="d1"><br>
+            <input type="time" class="d2"><br>
+            <input type="time" class="d3"><br>
+            <input type="time" class="d4"><br>
+            <input type="time" class="d5"><br>
+            <input type="time" class="d6"><br>
+            <input type="time" class="d7"><br>
+            <br>
             <input type="time" class="d8"><br>
             <input type="time" class="d9"><br>
             <input type="time" class="d10"><br>
@@ -101,13 +86,22 @@
             <input type="time" class="d14"><br>
         </div>
         <div class="column" class="hoursWorked"># of Hours Worked<br>
-            <input type="number" class="d8">
-            <input type="number" class="d9">
-            <input type="number" class="d10">
-            <input type="number" class="d11">
-            <input type="number" class="d12">
-            <input type="number" class="d13">
-            <input type="number" class="d14"></div>
+            <input type="number" class="d1"><br>
+            <input type="number" class="d2"><br>
+            <input type="number" class="d3"><br>
+            <input type="number" class="d4"><br>
+            <input type="number" class="d5"><br>
+            <input type="number" class="d6"><br>
+            <input type="number" class="d7"><br>
+            <br>
+            <input type="number" class="d8"><Br>
+            <input type="number" class="d9"><br>
+            <input type="number" class="d10"><br>
+            <input type="number" class="d11"><br>
+            <input type="number" class="d12"><br>
+            <input type="number" class="d13"><br>
+            <input type="number" class="d14"><br>
+        </div>
     </div>
 </fieldset>
 </form>

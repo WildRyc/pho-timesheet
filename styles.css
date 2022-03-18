@@ -5,14 +5,18 @@
   
   .column {
     float: left;
-    width: 25%;
+    display: flex
     padding: 0.5px;
+    margin: 15px;
+    flex-wrap: wrap
   }
   
   /* Clear floats after the columns */
   .row:after {
     content: "";
-    display: table;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     clear: both;
-    height: 24px;
+    gap: 20 px;
+    padding: 12px;
   }

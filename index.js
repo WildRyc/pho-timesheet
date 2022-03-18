@@ -2,6 +2,11 @@
 //import { saveAs } from 'file-saver'
 //import * as fs from "fs";
 
+//cleanup the json so it's ISO compatible
+function dateFixup (workingString) {
+  workingString.replace(/\//,'-');
+}
+
 // Populate the pay period dropdown
 let dropdown = document.getElementById('periodDropdown');
 dropdown.length = 0;
@@ -23,8 +28,9 @@ request.onload = function() {
     let option;
     for (let i = 0; i < data.length; i++) {
       option = document.createElement('option');
-      option.text = data[i].End
-      option.value = data[i].End;
+      let stuffHere = data[i].End.replaceAll(/\//g,'-')
+      option.text = stuffHere;
+      option.value = stuffHere;
       dropdown.add(option);
     }
    } else {
@@ -39,18 +45,39 @@ request.onerror = function() {
 request.send();
 
 //Fill in the dayWorked values based on the selection from the dropDown
-function changeEvent() {
+function periodSelect() {
   let dropPeriod = document.getElementById('periodDropdown').value;
-  if(dropPeriod != 'Select Period'){
-    console.log('This is the dropPeriod value: ', dropPeriod)
-    // console.log(document.getElementsByClassName('workDay d14').value)
-    // document.getElementsByClassName('workDay d14').value = dropPeriod
-    // console.log(document.getElementsByClassName('workDay d14').value)
-    // console.log('This is the result of querySelector: ', document.querySelector('div.workday > .d14'), 'it should be null')
-    // document.querySelector('div.workday > .d14').value = 1
-    // console.log('This is the result of the value setting: ', document.querySelector('div.workday > .d14'))
-    document.getElementById('hwd14').value = dropPeriod;
 
+// Trying this out: https://stackoverflow.com/questions/3871547/js-iterating-over-result-of-getelementsbyclassname-using-array-foreach
+  var elements = document.getElementsByClassName('workDay')
+  if(dropPeriod != 'Select Period'){
+    for (let i=0; i>15, i++;) {
+      unixDate = Date.parse(dropPeriod)
+      console.log(unixDate)
+      Array.from(elements).forEach(
+      (element) => {
+          element.value = unixDate+i-14;
+          console.log(element.value)
+      }
+      );
+    // ;
+    // for (let i=14; i>0; i--){
+  
+    //   }
+    // )
+    // }
+
+
+    //This next line actual;ly puts the dropdown value into Day 14
+
+    //    document.getElementById('hwd14').value = dropPeriod;
+    // console.log(document.getElementsByClassName("workDay"))
+   // for (let i = 0; i < 15 ; i++) {
+   //   targetDate = string('hwd', string(i+1));
+      //console.log
+      //document.getElementById(targetDate).val
+   // }
+                      }
   }
 }
 
